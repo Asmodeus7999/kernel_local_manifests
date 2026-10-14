@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="asmodeus" fetch="https://github.com/Asmodeus7999/" />
+
+  <!-- drop AOSP common -->
+  <remove-project name="kernel/common" />
+
+  <!-- your kernel in its place -->
+  <project path="common"
+           name="android_kernel_xiaomi_rock"
+           remote="asmodeus"
+           revision="android12-5.10" />
+
+  <!-- MTK out-of-tree modules -->
+  <project path="vendor/mediatek/kernel_modules"
+           name="MTK_kernel_modules"
+           remote="asmodeus"
+           revision="rock-u-oss" />
+</manifest>
